@@ -1,0 +1,257 @@
+:root {
+  --themeColor: rgb(14, 162, 189);
+}
+
+* {
+  scroll-margin-top: 60px;
+}
+
+body{
+	min-height: 100vh;
+	-webkit-tap-highlight-color: transparent;
+	/*background-color: #f6f9ff;*/
+}
+
+#body{
+	min-height: 100vh;
+}
+
+
+
+@font-face{
+	font-family: futura-regular;
+	src: url("fonts/Futura Book font.ttf");
+}
+
+@font-face{
+	font-family: futura-light;
+	src: url("fonts/futura light bt.ttf");
+}
+
+@font-face{
+	font-family: futura-pk-regular;
+	src: url("fonts/FuturaCyrillicBook.ttf");	
+}
+
+
+@font-face{
+	font-family: futura-pk-light;
+	src: url("fonts/FuturaCyrillicLight.ttf");	
+}
+
+@font-face{
+    font-family: Segoe UI Light;
+    src: url('fonts/segoeuil.ttf');
+}
+
+@font-face {
+	font-family: 'Segoe UI Regular';
+	font-style: normal;
+	font-weight: normal;
+	src: local('fonts/Segoe UI Regular'), url('fonts/Segoe UI.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Segoe UI Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('fonts/Segoe UI Italic'), url('fonts/Segoe UI Italic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Segoe UI Bold';
+	font-style: normal;
+	font-weight: normal;
+	src: local('fonts/Segoe UI Bold'), url('fonts/Segoe UI Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Segoe UI Bold Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('fonts/Segoe UI Bold Italic'), url('fonts/Segoe UI Bold Italic.woff') format('woff');
+}
+
+
+input{
+	font-family: lato-regular;
+	letter-spacing: 0.3px;
+}
+
+select{
+	font-family: lato-regular;
+	letter-spacing: 0.5px;
+}
+
+.yaniko-select{
+	font-family: lato-regular;
+	letter-spacing: 0.5px;
+
+	background-color: transparent;
+	border: 2px solid var(--themeColor);
+	border-style: groove;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-radius: 0px;
+	color: var(--themeColor);
+
+	cursor: pointer;
+}
+
+.yaniko-select:hover{
+	border: 2px solid var(--themeColor);
+	border-style: groove;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-radius: 0px;
+	color: var(--themeColor);
+	cursor: pointer;
+}
+
+option{
+	font-family: lato-regular;
+	letter-spacing: 0.5px;
+	margin-bottom: 20px;
+}
+
+.form-label {
+    font-family: 'Segoe UI Regular';
+    letter-spacing: 0.4px;
+    color: #485664;
+}
+
+.form-control {
+    background-color: transparent;
+    color: black;
+    border: 2px solid var(--themeColor);
+    border-style: groove;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 0px;
+    font-family: Segoe UI Regular;
+    letter-spacing: 0.5px;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.form-control:focus {
+    color: black;
+}
+
+.form-control:focus{
+	background-color: transparent;
+	border: 2px solid var(--themeColor);
+	border-style: groove;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-radius: 0px;
+	outline: 0;
+	box-shadow: 0 0 0 0;
+}
+
+.form-select{
+	background-color: transparent;
+	border: 1px solid var(--themeColor);
+	border-style: groove;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-radius: 0px;
+	color: black;
+}
+
+.form-select:focus{
+	background-color: transparent;
+	border: 1px solid var(--themeColor);
+	color: black;
+	outline: 0;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-radius: 0px;
+	box-shadow: 0 0 0 0;
+}
+
+
+.tagbutton{
+	min-width: 200px;
+	/*color: #F2EEE4;
+	border: 1px solid var(--themeColor);
+	background-color: var(--themeColor);
+	font-family: futura-book-font;
+	letter-spacing: 0.3px;*/
+}
+
+
+.form-text {
+    font-family: "Segoe UI Regular";
+    letter-spacing: 0.3px;
+    /*color: var(--themeColor);*/
+    font-stretch: expanded;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    font-weight: normal;
+}
+
+em {
+	color: grey;
+}
+
+.pass-visibility{
+	background-color: transparent;
+	cursor: pointer;
+	border: none;
+	z-index: 4;
+	/*position: ;*/
+}
+
+
+.option-active {
+    /* border: 1px solid grey; */
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-left-width: 1px;
+    border-left-color: royalblue;
+    border-right-width: 1px;
+    border-right-color: royalblue;
+    border-left-style: solid;
+    border-bottom-color: royalblue;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.options-v2{
+    color: midnightblue;
+    cursor: pointer;
+}
+
+.options-v2:hover{
+    background-color: rgba(65,105,225, 0.15);
+}
+
+.select-element-passive {
+    cursor: pointer;
+    border-bottom: 1px solid mignightblue;
+    border-bottom-color: royalblue;
+    border-bottom-style: groove;
+    border-bottom-width: 2px;
+}
+
+.select-element-active {
+    cursor: pointer;
+    border-bottom-color: royalblue;
+    border-bottom-style: groove;
+    border-bottom-width: 2px;
+}
+
+.angle-up{
+	transform: rotate(180deg);
+}
