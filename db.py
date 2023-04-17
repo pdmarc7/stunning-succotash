@@ -29,8 +29,6 @@ def save_blog_post(blog_post):
 def save_post_comment(comment):
     comments = get_comments(comment["postId"])
     comments.append(comment)
-
-    print(comments)
     update_blog_post(comment["postId"], "comments", comments)
 
 
@@ -84,9 +82,9 @@ def get_user_by_referral_code(referral_code):
         return None
 
 
-def get_blog_posts(app_name):
+def get_blog_posts(app_id):
     doc_ref = db.collection('blog-posts')
-    query = doc_ref.where('appName', '==', app_name)
+    query = doc_ref.where('appId', '==', app_id)
     results = build_query_list(query)
 
     if len(results) > 0:
@@ -147,3 +145,18 @@ def referred_users(referral_code):
     else:
         return []
 
+
+def get_app_settings(app_id):
+    doc_ref = db.collection('app-settings')
+    query = doc_ref.where('appId', '==', app_id)
+    results = build_query_list(query)
+
+    settings = results[0]
+    return settings["appName"], settings["appJumbotron"], settings["appTitle"], settings["appSubTitle"], settings["appAbout"]
+
+
+def update_app_settings(app_id, dict_key, value):
+    doc_ref = db.collection('app-settings').document(app_id)
+    doc_ref.update({dict_key: value})
+
+    

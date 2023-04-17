@@ -29,10 +29,19 @@ body{
 }
 
 @font-face{
+	font-family: futura-medium;
+	src: url("fonts/futura medium bt.ttf");	
+}
+
+@font-face{
 	font-family: futura-pk-regular;
 	src: url("fonts/FuturaCyrillicBook.ttf");	
 }
 
+@font-face{
+	font-family: futura-pk-medium;
+	src: url("fonts/FuturaCyrillicMedium.ttf");	
+}
 
 @font-face{
 	font-family: futura-pk-light;

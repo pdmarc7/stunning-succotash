@@ -44,12 +44,16 @@ function AppPage(){
                     fontFamily: "Segoe UI Light"
                 }),
 
-                p("Return To DashBoard To Comment On More Articles").addClass("text-center fs-6 mt-3").css({
+                p("Click The Button Below To Return To Blog").addClass("text-center fs-6 mt-3").css({
                     fontFamily: "Segoe UI Regular"
                 }),
 
-                a(appBtn("Continue Review").addClass("mt-3"), `/review-article/${postId}/0`)
-            )
+                a(appBtn("Return To Blog").addClass("mt-3"), `/blog/${postId}`)
+
+                //a(appBtn("Continue Review").addClass("mt-3"), `/review-article/${postId}/0`)
+            ).css({
+                "min-height": "100vh"
+            })
         ),
 
 

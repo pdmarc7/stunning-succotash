@@ -14,7 +14,7 @@ var navigationArrayContent = [
         },*/
 
         {
-            title: "Back To Blog",
+            title: "Back To Blog Home",
             clickFunction: function(){
 
             },
@@ -108,36 +108,22 @@ function AppPage(){
     ]
 }
 
-function blogSubNav(){
-    var today = new Date()
-    var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-
-    return row().append(
-        col(null, 12).append(
-            container().append(
-                flexbox().addClass("justify-content-end align-items-center flex-wrap py-3").append(
-                    div().append(
-                        /*p("Today's Date").addClass("").css({
-                            fontFamily: "futura-pk-regular",
-                            color: "grey"
-                        }),*/
-
-                        p(`${weekdays[today.getUTCDay()]}, ${today.getUTCDate()} ${months[today.getMonth()]}, ${today.getFullYear()}`).addClass("").css({
-                            fontFamily: "Segoe UI Regular",
-                            color: "black"
-                        }),
-                    )
-                ),
-            )
-        )
-    ).css({
-        backgroundColor: "rgba(72, 86, 100, 0.05)",
-    })
-}
 
 function createPostForm(){
     var formObj = [
+        {
+            "tag": "input",
+            "label": "Authorization Key",
+            "formText": "Enter The Authorization Key",
+            "attr": {
+                "name": "authorizationKey",
+                "placeholder": "Use Authorization Key To Approve This Post"
+            },
+
+            "colSize": 12,
+            "breakpoint": "md"
+        },
+
         {
             "tag": "input",
             "label": "Title",

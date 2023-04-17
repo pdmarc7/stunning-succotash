@@ -1,6 +1,4 @@
 pageObj = {
-    title: "Yaniko Ltd",
-    subTitle: "Global Solutions For Innovation",
     navigationArray: [
         /*{
             title: "Blog",
@@ -11,7 +9,7 @@ pageObj = {
         },*/
 
         {
-            title: "Return To Blog",
+            title: "Return To Blog Home",
             clickFunction: function(){
 
             },
@@ -86,7 +84,9 @@ function AppPage(){
         ),
 
         container().addClass("").append(
-            blogContent(pageObj.blogContent)
+            blogContent(pageObj.blogContent),
+
+            renderComments(pageObj.blogContent.comments).addClass()
         )
     ]
 }
@@ -142,35 +142,6 @@ function AppPage(){
     })
 }*/
 
-function blogSubNav(){
-    var today = new Date()
-    var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-
-    return row().append(
-        col(null, 12).append(
-            container().append(
-                flexbox().addClass("justify-content-end align-items-center flex-wrap py-3").append(
-                    div().append(
-                        /*p("Today's Date").addClass("").css({
-                            fontFamily: "futura-pk-regular",
-                            color: "grey"
-                        }),*/
-
-                        p(`${weekdays[today.getUTCDay()]}, ${today.getUTCDate()} ${months[today.getMonth()]}, ${today.getFullYear()}`).addClass("").css({
-                            fontFamily: "Segoe UI Regular",
-                            color: "black"
-                        }),
-                    )
-                ),
-            )
-        )
-    ).css({
-        backgroundColor: "rgba(72, 86, 100, 0.05)",
-    })
-}
-
-
 
 function blogContent(blogPost){
     return row().append(
@@ -196,7 +167,7 @@ function blogContent(blogPost){
                         flexbox().addClass("flex-wrap my-3").append(
                             blogIcon("person", blogPost.author).addClass("me-3"),
                             blogIcon("clock-history", blogPost.datePublished).addClass("me-3"),
-                            //blogIcon("chat-dots", `${blogPost.commentsNo} Comments`)
+                            blogIcon("chat-dots", `${blogPost.comments.length} Comment(s)`)
                         ),
 
                         p(blogPost.content).addClass("").css({
@@ -208,12 +179,9 @@ function blogContent(blogPost){
                     ),
 
 
-                    flexbox().addClass("justify-content-center my-4").append(
-                        appBtn("Read More Posts").addClass("tagbutton py-2").on("click", function(){
-                            window.location.assign(
-                                "/blog"
-                            )
-                        })
+                    flexbox().addClass("justify-content-start my-4 px-4").append(
+                        a(appBtn("Read More Posts").addClass("py-2"), "/"),
+                        a(appBtn("Leave A Comment").addClass("py-2"), `/comment/${blogPost.postId}`).addClass("ps-3")
                     )
                 ).css({
                     "max-width": "800px",
@@ -234,5 +202,63 @@ function blogIcon(iconText, text){
             color: "#6c757d",
             fontSize: "small"
         })
+    )
+}
+
+function renderComments(comments){
+    //randomImageAvatars = []
+
+    commentObjs = []
+
+    for (const comment of comments){
+        commentObjs.push(
+            div().addClass("shadow px-4 py-4 rounded-3 mb-5 w-100").append(
+                div().append(
+                    p(`${comment.firstName} ${comment.lastName}`).css({
+                        fontFamily: "futura-pk-medium",
+                    }),
+                    
+                    p(`${comment.datePublished}`).css({
+                        color: "grey", 
+                        fontFamily: "Segoe UI Regular",
+                        fontSize: "small"
+                    }).addClass("mb-3"),
+                    
+                    p(`${comment.comment}`).addClass("").css({
+
+                    })
+                )
+            ).css({
+                "max-width": "800px",
+            })
+        )
+    }
+
+    return row().append(
+        col(null, 12).addClass("mb-3").append(
+            flexbox().addClass("align-items-center w-100 flex-column").append( 
+                div().addClass("px-4 pb-2 w-100").append(
+                    flexbox().append(
+                        (function(){
+                            if (comments.length > 0){
+                                return p("Comments").addClass("fs-2").css({
+                                    fontFamily: "Segoe UI Light",
+                                    color: "grey"
+                                })
+                            } else {
+                                return p("No Comments Yet").addClass("fs-2").css({
+                                    fontFamily: "Segoe UI Light",
+                                    color: "grey"
+                                })
+                            }
+                        })
+                    ).addClass("justify-content-end"),
+                ).css({
+                    "max-width": "800px",
+                }),
+
+                commentObjs
+            )
+        )
     )
 }

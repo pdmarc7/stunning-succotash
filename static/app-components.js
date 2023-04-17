@@ -236,7 +236,7 @@ function blogCard(cardObj){
                 flexbox().addClass("flex-wrap my-3").append(
                     blogIcon("person", cardObj.author).addClass("me-3"),
                     blogIcon("clock-history", cardObj.datePublished).addClass("me-3"),
-                    //blogIcon("chat-dots", `${cardObj.commentsNo} Comments`)
+                    blogIcon("chat-dots", `${cardObj.comments.length} Comment(s)`)
                 ),
 
                 p(cardObj.context).addClass("").css({
@@ -381,14 +381,47 @@ async function displayFlashMessages(){
         )
     }
 
-    console.log(flashMessages)
-
     return flashMessages
 }
 
 $(async function(){
-    /*$("body").append(
-        `<script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://inklinkor.com/tag.min.js',5863841,document.body||document.documentElement)</script>
+    $("body").append(
+        `
+        
         `,
-    )*/
+    )
+
+    $("head").append(
+        `
+
+        `,
+    )
 });
+
+function blogSubNav(){
+    var today = new Date()
+    var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+    return row().append(
+        col(null, 12).append(
+            container().append(
+                flexbox().addClass("justify-content-end align-items-center flex-wrap py-3").append(
+                    div().append(
+                        /*p("Today's Date").addClass("").css({
+                            fontFamily: "futura-pk-regular",
+                            color: "grey"
+                        }),*/
+
+                        p(`${weekdays[today.getUTCDay()]}, ${today.getUTCDate()} ${months[today.getMonth()]}, ${today.getFullYear()}`).addClass("").css({
+                            fontFamily: "Segoe UI Regular",
+                            color: "black"
+                        }),
+                    )
+                ),
+            )
+        )
+    ).css({
+        backgroundColor: "rgba(72, 86, 100, 0.05)",
+    })
+}

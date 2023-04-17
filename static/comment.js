@@ -77,9 +77,9 @@ function AppPage(){
                 fontFamily: "Segoe UI Regular",
             }).addClass("fs-6 text-start"),*/
 
-            flexbox().addClass("justify-content-start").append(
+            /*flexbox().addClass("justify-content-start").append(
                 a(appBtn("Skip To Start Review").addClass("tagbutton mt-2 mb-3"), `/review-article/${pageObj.postId}/0`),
-            ),
+            ),*/
 
             p(pageObj.title).css({
                 fontFamily: "futura-pk-regular",
@@ -106,36 +106,35 @@ function AppPage(){
     ]
 }
 
-function blogSubNav(){
-    var today = new Date()
-    var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-
-    return row().append(
-        col(null, 12).append(
-            container().append(
-                flexbox().addClass("justify-content-end align-items-center flex-wrap py-3").append(
-                    div().append(
-                        /*p("Today's Date").addClass("").css({
-                            fontFamily: "futura-pk-regular",
-                            color: "grey"
-                        }),*/
-
-                        p(`${weekdays[today.getUTCDay()]}, ${today.getUTCDate()} ${months[today.getMonth()]}, ${today.getFullYear()}`).addClass("").css({
-                            fontFamily: "Segoe UI Regular",
-                            color: "black"
-                        }),
-                    )
-                ),
-            )
-        )
-    ).css({
-        backgroundColor: "rgba(72, 86, 100, 0.05)",
-    })
-}
 
 function createPostForm(){
     var formObj = [
+        {
+            "tag": "input",
+            "label": "First Name",
+            "formText": "Enter Your First Name",
+            "attr": {
+                "name": "comment-first-name",
+                "placeholder": "First Name"
+            },
+
+            "colSize": 6,
+            "breakpoint": "md"
+        },
+
+        {
+            "tag": "input",
+            "label": "Last Name",
+            "formText": "Enter Your Last Name",
+            "attr": {
+                "name": "comment-last-name",
+                "placeholder": "Last Name"
+            },
+
+            "colSize": 6,
+            "breakpoint": "md"
+        },
+
         {
             "tag": "textarea",
             "label": "Leave A Comment",
