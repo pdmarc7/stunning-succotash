@@ -14,10 +14,10 @@ APP_AUTHORIZATION_KEY="379221810a887577970d8396a48dd7a6136a41fcdaf7706b6488fa1d8
 
 
 app = Flask(__name__)
-app.secret_key = os.environ["APP_SECRET_KEY"]
+app.secret_key = APP_SECRET_KEY
 
 def verify_authorization_key(authorization_key):
-    return authorization_key == os.environ["APP_AUTHORIZATION_KEY"]
+    return authorization_key == APP_AUTHORIZATION_KEY
 
 @app.route('/')
 def blog():
