@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "marcello-349916",
+  "private_key_id": "693990f1bdfadea347e56e5aa8aea2af95c15e14",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC6EsGxqwVBKwRm\nNqtSpl+CA1JzQCJpzoFMcfKLjthEtH8HqBdmOB40ZYuxcs7cdML5tyE3LG8CSmRO\nCgK3ElTZRQbAFZ5BmAyeuTA8AtilM+vC1dpbeL7nr96R5ZDudUi9hxO+aA9wkJCm\nIkzDFWyafA6V6/sc6ZrPMphmm9MAB4oNNyPfU1pu6eFm8OrnbsqbrPjTNvCuyI8b\nARDjfuhisYPzYdBZahfPTdNlyvGTv+JhhKn9jMNnbXP+QVzBCNJciL2+hd6X0LVe\nHVOU+dcpKpP0CZGH1gU2LBaTD/c4C4SB3cP6ZgWjoIGC53ATgjVDv7sZVFp1ke3B\nr0hpnrxrAgMBAAECggEAAe9+3pZAQplHYd1g2/zye6u8CGW69ekVJPJsxlElf+hQ\nvoelFqqLWCzBqhiV6tiS8OvAdUVSxJLCq8ZJKzrpleRrorK7cPs7WKkKM2fkLHPA\nqux0RQUHYHvg/WJh8CI0wlrMxutoeSK1jDKSkdc2o7S+pqreTvmKh9nMBlLuV4W3\n+f0WJ1qI8OKUEe/xphNeTddXhWqJEXL+hotdUP9y4peLOTMbZAhSTxabDxd703E/\noE7wVGtVqs3CU2DMCcweVqEzhOXKJzRtBOEiklEtzvWG1PUVnSfW6xm3Xa92e4Vl\nuZp0sqPYOqpg0LLKReI3SvAC431V1inoWrU8Ja/TgQKBgQD4CBUIu9ZKz5onK2WH\nngHs4DtBtAnf45qAj8eEylDxpuUbKE03+CA9/cX7z4sU6PtGe/92o2Y8oeZCuI0a\nhp+DA7vryn62VnI6VF0SOHiJrJfYOmLeonISr1hEmAl3FovEzKf5XGJ8QrCPd7x7\nOz+foI5sPGeOG6DnhBUatw9F0QKBgQDADRpT1p9/o5Gs8wJsZjoU2wOM/jdKhdhy\nZFGiEIX81X6xCzl/KuRUyGOhFrB/FQNnKvDlsuZwuYMe0fFrhvWY/Y9JHj0o9G/+\nFqzvKpm33nWFXFaNJW9K55ThAvnG5XXW1EHNbKuNXxmOLd071YBfV+uGoMHP+QuL\nsis9H5RhewKBgQC1xU6M+QPCDcTeYdplejHVBDvJGgWGlAndoAFLWu3ZO0N6FJ4K\nn4gZhkq7EU3PRDMqY6NDsdoyI0BZs2CNiQ2LeYgV9G/Kdy39e2g9+y6zTs51Q8zD\ndm99LA3XL0j4gohp8MZFZCQ1BrbYXZq/ARvOg179CYOmzK6uHMlOq8vAkQKBgHUD\nxsXMYDRJ+kmRaymXA86PP1OZ1SB/+siAHUkMnkbV4jKHL0ovXR3XVvTguTtFF2S1\nwj+CSGvobF7L9jfY7C2CWNppJUSd4trDAC1dHHnuflZ6U3X+mBfgkFKlGIE6cBks\nDMfYbZJenliF02VQib4N+MB3lH9eM82zCitc4XCfAoGAYCm32p4gV51JawCSz8h8\nPcy0+Gnp/TS2+BZyIcvNWThISN6tcdsMus0cc+S1Mk3UcvzdocTgcvfKtABjVhT/\nu/gKuAd4Bq6YAi9Vbvx70anLsRAyujs++AWPbFjmgqsR68eEvMBXgONXKRNXdQKG\n4RxeOBQNyhdgK7pmshdgQmE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "yaniko-ltd-developer@marcello-349916.iam.gserviceaccount.com",
+  "client_id": "118036016764331245532",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/yaniko-ltd-developer%40marcello-349916.iam.gserviceaccount.com"
+}
